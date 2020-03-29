@@ -25,6 +25,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/view_libros.xml',
+        'views/view_autor.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
