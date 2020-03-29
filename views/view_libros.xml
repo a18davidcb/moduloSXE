@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+  <record id='libros_libro_action' model='ir.actions.act_window'>
+    <field name="name">Libros</field>
+    <field name="res_model">libros.libro</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_libros_top_level" name="Libros"/>
+  <menuitem id="menu_libros" parent="menu_libros_top_level" action="libros_libro_action"/>
+
+  <record id="libro_view_form" model="ir.ui.view">
+    <field name="name">Formulario de libros</field>
+    <field name="model">libros.libro</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="author_id"/>
+        <field name="published_date"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="libro_view_tree" model="ir.ui.view">
+    <field name="name">Lista de libros</field>
+    <field name="model">libros.libro</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="author_id"/>
+        <field name="published_date"/>
+      </tree>
+    </field>
+  </record>
+
+</odoo>

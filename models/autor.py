@@ -3,8 +3,10 @@
 from odoo import models, fields, api
 
 class autor(models.Model):
-    _inherit = 'res.partner'
+    _name='libros.autor'
+    _inherits = {'res.partner': 'partner_id'}
     
+    partner_id = fields.Many2one('res.partner', ondelete='cascade')
     book_ids = fields.One2many('libros.libro', 'id', string='Libros escritos')
     published_books = fields.Integer('Número de libros publicados', compute='_num_libros', store=False)
 
