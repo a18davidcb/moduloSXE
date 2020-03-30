@@ -9,8 +9,16 @@
     <field name="view_mode">tree,form</field>
   </record>
 
+  <record id='libros_autor_action' model='ir.actions.act_window'>
+    <field name="name">Autores</field>
+    <field name="res_model">libros.autor</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
   <menuitem id="menu_libros_top_level" name="Libros"/>
   <menuitem id="menu_libros" parent="menu_libros_top_level" action="libros_libro_action"/>
+  <menuitem id="menu_autores" parent="menu_libros_top_level" action="libros_autor_action"/>
 
   <record id="libro_view_form" model="ir.ui.view">
     <field name="name">Formulario de libros</field>
