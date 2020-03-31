@@ -9,6 +9,7 @@
                 <group>
                     <field name="partner_id"/>
                     <field name="image" widget="image" class="oe_avatar"/>
+                    <field name="book_ids" widget="one2many" />
                 </group>
             </form>
         </field>
