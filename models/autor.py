@@ -7,10 +7,9 @@ class autor(models.Model):
     _inherits = {'res.partner': 'partner_id'}
     
     partner_id = fields.Many2one('res.partner', ondelete='cascade')
-    book_ids = fields.One2many('libros.libro', 'id', string='Libros escritos')
+    book_ids = fields.One2many('libros.libro', inverse_name='author_id', string='Libros escritos')
     published_books = fields.Integer('Número de libros publicados', compute='_num_libros', store=False)
 
     @api.depends('book_ids')
     def _num_libros(self):
-        for record in self:
-            return len(self.book_ids)
+        return len(self.book_ids)
