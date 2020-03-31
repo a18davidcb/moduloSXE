@@ -3,10 +3,10 @@
     'name': "Libros",
 
     'summary': """
-        Control de autores y libros escritos""",
+        Control de autores y libros""",
 
     'description': """
-        Controlar autores y los libros que hayan escrito
+        Controlar autores y libros
     """,
 
     'author': "a18davidcb",
